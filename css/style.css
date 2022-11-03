@@ -216,6 +216,9 @@ body {
   @media only screen and (max-width: 56.25em) {
     .about-section {
       height: 105vh; } }
+  @media only screen and (max-width: 37.5em) {
+    .about-section {
+      height: 120vh; } }
 
 .tertiory-heading {
   font-size: 1.8rem;
@@ -346,6 +349,9 @@ body {
     .feature__section .feature-box:hover {
       transform: translateY(-2rem);
       cursor: pointer; }
+  @media only screen and (max-width: 37.5em) {
+    .feature__section {
+      height: 160vh; } }
 
 .cards {
   perspective: 150rem;

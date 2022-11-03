@@ -22,4 +22,7 @@
       cursor: pointer;
     }
   }
+  @include respond(phone) {
+    height: 160vh;
+  }
 }

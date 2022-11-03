@@ -19,8 +19,10 @@
   height: 90vh;
   @include respond(tab) {
     height: 105vh;
-
-}
+  }
+  @include respond(phone) {
+    height: 120vh;
+  }
 }
 .tertiory-heading {
   font-size: 1.8rem;
