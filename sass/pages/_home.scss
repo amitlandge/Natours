@@ -1,0 +1,26 @@
+.section-stories {
+    padding: 2rem;
+  position: relative;
+
+}
+.feature__section{
+  height: 90vh;
+  padding: 20rem 0;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($lightGreen, 0.707),
+      rgba($mediumGreen, 0.799)),
+  url("../../img/nat-4.jpg");
+  background-size: cover;
+  transform: skewY(-7deg);
+  margin-top: -10rem;
+
+  & > * {
+      transform: skewY(7deg);
+  }
+
+  @include respond(tab) {
+      padding: 10rem 0;
+      height: 150vh;
+  }
+}

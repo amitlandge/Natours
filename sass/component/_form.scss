@@ -1,0 +1,140 @@
+.section-book {
+  width: 100%;
+
+  padding: 15rem 0rem;
+  background-image: linear-gradient(to right, $darkGreen, $lightGreen);
+  .book {
+    width: 100%;
+   
+    background-image: linear-gradient(
+        105deg,
+        rgba(245, 240, 240, 0.8) 50%,
+        transparent 50%
+      ),
+      url("../../img/nat-10.jpg");
+    background-size: cover;
+    box-shadow: 0 2rem 9rem rgba($color: #000000, $alpha: 0.4);
+    border-radius: 3px;
+    padding: 5rem;
+   
+    @include respond(lap) {
+      background-image: linear-gradient(
+          105deg,
+          rgba(245, 240, 240, 0.8) 70%,
+          transparent 30%
+        ),
+        url("../../img/nat-10.jpg");
+      background-size: cover;
+    }
+    @include respond(tab) {
+      background-image: linear-gradient(105deg, rgba(245, 240, 240, 0.8) 100% ,transparent 0%),
+        url("../../img/nat-10.jpg");
+      background-size: cover;
+    }
+    &_heading {
+      margin: 2rem 0rem;
+      color: $darkGreen;
+    }
+    &__form {
+      width: 50%;
+      @include respond(lap) {
+        width: 70%;
+      }
+      @include respond(tab) {
+        width: 100%
+      }
+    }
+  }
+}
+.form__group {
+  margin-bottom: 2rem;
+  & > input {
+    font-family: inherit;
+    font-weight: 700;
+    display: block;
+    width: 90%;
+    padding: 1.5rem 2rem;
+    border: none;
+    border-radius: 3px;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+    &::placeholder {
+      color: gray;
+    }
+    &:focus {
+      outline: none;
+      border-bottom: 3px solid $darkGreen;
+      box-shadow: 0 1rem 2rem rgba($color: #000000, $alpha: 0.1);
+    }
+    &:focus:invalid {
+      border-bottom: 3px solid $color-secondary-2;
+    }
+    &:placeholder-shown + label {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  & > label {
+    margin-top: 0.5rem;
+    margin-left: 2rem;
+    font-size: 1.5rem;
+    color: rgb(103, 99, 99);
+    font-weight: 700;
+    transition: all 0.3s;
+    display: block;
+  }
+}
+.radio__group {
+  transform: translateX(-7rem);
+  @include respond(tab) {
+    transform: translateX(-3rem);
+  }
+
+  &--button {
+    width: 49%;
+    display: inline-flex;
+
+    justify-content: center;
+    // align-items: center;
+    @include respond(phone){
+      width: 100%;
+      justify-content: flex-start;
+
+    }
+
+    & > label {
+      font-size: 1.8rem;
+      color: rgb(77, 75, 75);
+      letter-spacing: 1px;
+      cursor: pointer;
+    }
+    & > input {
+      visibility: hidden;
+    }
+    & > input:checked + .circle::after {
+      visibility: visible;
+    }
+  }
+  .circle {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 3px solid $darkGreen;
+    position: relative;
+    display: inline-block;
+    margin-right: 0.8rem;
+  }
+  .circle::after {
+    content: "";
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $darkGreen;
+    visibility: hidden;
+  }
+}

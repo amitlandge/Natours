@@ -1,0 +1,32 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+
+  @include respond(lap) {
+    font-size: 56.25%;
+  }
+
+  @include respond(tab) {
+    font-size: 50%;
+  }
+
+  @include respond(desktop) {
+    font-size: 75%;
+  }
+}
+body {
+  font-family: "Leto", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: $grayLight;
+  padding: 3rem;
+  box-sizing: border-box;
+  @include respond(tab) {
+    padding: 1rem;
+  }
+}
